@@ -1,0 +1,4 @@
+/node_modules
+/react-jwt-auth/node_modules
+.env
+
