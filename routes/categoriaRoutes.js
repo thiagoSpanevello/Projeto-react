@@ -4,8 +4,8 @@ const express = require('express'),
     permit = require('../middlewares/permission')
 
 
-    router.get('/', catCtrl.pegar)
+    router.get('/',  catCtrl.pegar)
     router.get('/:id', catCtrl.CatSpessific)
-   router.post('/', permit('adm'), catCtrl.salvar)
+   router.post('/cat/cad', permit('adm'), catCtrl.salvar)
 
 module.exports = router;

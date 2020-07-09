@@ -1,4 +1,5 @@
 /node_modules
 /react-jwt-auth/node_modules
+*-lock.json
 .env
 

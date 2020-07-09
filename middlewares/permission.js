@@ -9,13 +9,10 @@ module.exports =  permit = (...allowed)=>{
             for (let i = 0; i < usuario.rules.length; i++){
                 const rule = usuario.rules[i];
                 if(allowed.indexOf(rule) >= 0){
-                    res.status(403).send('sem permissão')
                     return next()
                 }
             }
-           
-        } else {
-            res.status(403).send('sem permissão')
         }
+            res.status(403).send('sem permissão')
     }
 }
