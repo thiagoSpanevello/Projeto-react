@@ -1,0 +1,183 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 200px;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+.espaco{
+  margin-left: 5%;
+  margin-top: 6%;
+}
+.navbar{
+  color: black!important;
+}
+
+.card-home{
+  margin-left: 5%;
+  margin-top: 2%;
+  min-width: 200px;
+  min-height: 250px;
+  border-radius: 2%;
+  background-image: linear-gradient(#2ECCFA, #0000ff78);
+  font-size: large;
+  color: white;
+  text-transform: uppercase;
+
+}
+.inputs{
+  border-radius: 2%;
+}
+.text-area{
+  min-width: 100%;
+  min-height: 70%;
+}
+.card-acc-prest{
+  margin-left: 5%;
+  margin-top: 2%;
+  min-width: 230px;
+  min-height: 270px;
+  border-radius: 2%;
+  background-image: linear-gradient(#2ECCFA, #0000ff78);
+  font-size: large;
+  color: white;
+}
+.card-prest{
+  margin-left: 5%;
+  margin-top: 1%;
+  padding-left: 1%;
+  width: 40%;
+  border: solid 2px black;
+  border-radius: 2%;
+  background-image: linear-gradient(#2ECCFA, #0000ff78);
+  font-size: large;
+  color: white;
+}
+.btn-recusar{
+  margin-top: 5%;
+  margin-left: 1%;
+  background-color: #FE2E64;
+  width: 50%;
+  color:white;
+  border-radius: 2%;
+}
+.btn-aceitar{
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  background-color: #2ECCFA;
+  width: 50%;
+  color:white;
+  border-radius: 2%;
+}
+.btn-aval{
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  background-color: #2ECCFA;
+  width: 50%;
+  color:white;
+  border-radius: 2%;
+}
+
+.btn-finalizar{
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  background-color: #0000ff78;
+  width: 50%;
+  color:white;
+}
+
+.sem-serv{
+  margin-left: 40%;
+  margin-top: 2%;
+  min-width: 150px;
+  min-height: 200px;
+  border-radius: 2%;
+  background-image: linear-gradient(red, orange);
+  font-size: large;
+  color: white;
+  padding: 3%;
+}
+.margin{
+  margin-top: 3%;
+}
+.cadCat{
+  margin-left: 5%;
+  margin-top: 2%;
+}
+.margin-left{
+  margin-left: 1%;
+}
+
+.cadCat-link{
+  border: solid 2px black;
+  border-radius: 4%;
+  padding: 1%;
+  color: white;
+  background-color:#2ECCFA;
+
+}
+
+.dropdown{
+  margin-left: 75%;
+  color: white!important;
+}
+.espaçamento{
+  margin-left: 5%;
+}
+
+.input {
+  min-width: 100px;
+  margin-top: 1%;
+}
+body{
+  flex: 1;
+}
+.Form{
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  height: 100%;
+}
+
+.text {
+  font-size: 40px;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
