@@ -21,5 +21,10 @@ exports.CatSpessific = (req, res, next) =>{
 }
 
 exports.salvar = (req, res, next) =>{
-        res.send('ok')
+    let u = req.body;
+    console.log(u);
+        Categoria.create(u, (error, categoria) => {
+            console.log('criou a categoria' + categoria);
+            res.json(categoria)
+        })
 }

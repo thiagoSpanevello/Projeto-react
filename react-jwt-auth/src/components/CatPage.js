@@ -18,28 +18,18 @@ class CatPage extends Component {
         let prestadores = [];
         let data = []
         let elementos = [];
-        data = this.state.dados;
-        console.log(data);
         prestadores = this.state.prest;
         console.log('lista de prestadores');
+        console.log(prestadores);
         
-        // if(data){
+        
+        if(prestadores.length != 0) {
             for (let index = 0; index < prestadores.length; index++) {
-                
-                
-                for (let i = 0; i < data.length; i++) {
-                    if(prestadores[index]._id == data[i]._id){      
-                        if(data[i].media && data[i].media != null){
-                            elementos.push(<Link key={index} to={`/home/contrato/${prestadores[index]._id}`}><button className="card-acc-prest" ><span>Nome: {prestadores[index].nome}</span><br /><span>CNPJ: {prestadores[index].cnpj}</span><br /><span>Email: {prestadores[index].email}</span><br /><span>Avaliação: {data[i].media} </span></button></Link>)
-
-                        } else {
-                            elementos.push(<Link key={index} to={`/home/contrato/${prestadores[index]._id}`}><button className="card-acc-prest" ><span>Nome: {prestadores[index].nome}</span><br /><span>CNPJ: {prestadores[index].cnpj}</span><br /><span>Email: {prestadores[index].email}</span><br /><span>Avaliação: 0 </span></button></Link>)
-
-                        }
-                    }
-                  
-                }
+                elementos.push(<Link key={index} to={`/home/contrato/${prestadores[index].prestador._id}`}><button className="card-acc-prest" ><span>Nome: {prestadores[index].prestador.nome}</span><br /><span>CNPJ: {prestadores[index].prestador.cnpj}</span><br /><span>Email: {prestadores[index].prestador.email}</span><br /><span>Avaliação: {prestadores[index].media} </span></button></Link>)
             }
+        } else {
+            elementos.push(<div className='margin'><span className='sem-serv'>Sem Prestadores Nesta Categoria</span></div>);
+        }
         
         return (elementos)
     }
@@ -55,8 +45,7 @@ class CatPage extends Component {
             url: `/home/prestadores`
         }).then((res) => {
             console.log(res);
-            this.setState({ 'prest': res.data.prestadores })
-            this.setState({ 'dados': res.data.dados })
+            this.setState({ 'prest': res.data })
         })
     }
 

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 
 let CategoriaModel = new Schema({
-    nome: {type: String, required: true, unique: true},
+    tipo: {type: String, required: true, unique: true},
 
 }, {collection: 'categorias'})
 

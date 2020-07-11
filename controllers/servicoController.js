@@ -54,7 +54,7 @@ exports.finalizar = (req, res, next) =>{
 
 exports.recusar = (req, res, next) =>{
     let serv = req.body
-    console.log("id do servico pra aceitar");
+    console.log("id do servico pra recusar");
     console.log(serv);
         servico.findOneAndUpdate({_id: serv.id }, { datahora_denied: new Date, datahora_fim: new Date, valor: 0}, (error, Servico) =>{
             if(error) return next(error)

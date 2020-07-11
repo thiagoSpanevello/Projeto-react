@@ -16,6 +16,7 @@ class PrestHomePage extends Component {
         let serv = [];
         let elementos = [];
         serv = this.state.servicos;
+    if(serv.length > 0){
         for (let index = 0; index < serv.length; index++) {
 
             elementos.push(<div className="card-prest" >
@@ -28,6 +29,9 @@ class PrestHomePage extends Component {
                 <button type="button" id={serv[index]._id} className='btn-aceitar' onClick={this.aceitar}>Aceitar</button>
             </div>)
         }
+    } else {
+        elementos.push(<div className='margin'><span className='sem-serv'>Sem Serviços Pendentes</span></div>);
+    }
         return (elementos)
     }
 

@@ -13,13 +13,13 @@ class cadPrest extends Component {
       senha: this.state.password,
       nome: this.state.nome,
       cnpj: this.state.cnpj,
-      serviços: this.state.serviços,
+      serviços: this.state.tipoServiços,
       rules: this.state.rules
 
     }
     // Faz a requisição para o Back com os dados de login
     axios.post('http://localhost:3001/cad/prest', prest).then(function (res) {
-      alert('funfo')
+      alert('resposta: ' + res.data)
 
       // Se nao vier token, cai aqui para teste de erro de login
     }).catch(function (error) {

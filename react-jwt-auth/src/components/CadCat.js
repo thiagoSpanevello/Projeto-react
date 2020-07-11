@@ -6,13 +6,13 @@ class CadCat extends Component{
     Enviar = () => {
         console.log(this.state);
         let categoria = {
-          nome: this.state.nome,
+          tipo: this.state.tipo,
          
       }
     // Faz a requisição para o Back com os dados do cadastro
     axiosConf({
         method: 'POST',
-        url: '/cat/cad',
+        url: 'categoria/cat/cad',
         data: categoria
 
     }).then(function (res) {
@@ -30,12 +30,12 @@ class CadCat extends Component{
       constructor() {
         super()
         this.state = {
-          nome:''
+          tipo:''
         }
       }
 
       GetNome = (event) => {
-        this.setState({ nome: event.target.value })
+        this.setState({ tipo: event.target.value })
       }
 
       render() {

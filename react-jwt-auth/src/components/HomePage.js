@@ -43,7 +43,7 @@ class Home extends Component {
     }
     render() {
         for (let index = 0; index < localStorage.getItem('rules').length; index++) {
-             if(localStorage.getItem('rules')[index] == 'adm')
+             if(localStorage.getItem('rules')[index] == 'adm') {
              console.log(localStorage.getItem('rules'));
              
             return(
@@ -54,6 +54,7 @@ class Home extends Component {
 
            </div>
             )
+         }
         }
         return (
             <div>
